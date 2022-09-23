@@ -2,6 +2,15 @@ public class Human {
     private int yearOfBirth;
     private String name;
     private String town;
+    private String job;
+
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
+    }
 
     public int getYearOfBirth() {
         return yearOfBirth;
@@ -29,6 +38,6 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Привет! Меня зовут " + name + ". Я из города " + town + ". Я родился в " + yearOfBirth + " году. Будем знакомы!";
+        return "Привет! Меня зовут " + name + ". Я из города " + town + ". Я родился в " + yearOfBirth + " году. " + "Я работаю на должности " + job + " Будем знакомы!";
     }
 }
