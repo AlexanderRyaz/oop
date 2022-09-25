@@ -6,9 +6,22 @@ public class Human {
 
     public Human(int age, String name, String town, String job) {
         setYearOfBirth(age);
-        this.name = name;
-        this.town = town;
-        this.job = job;
+        if (name == null || "".equals(name)) {
+            this.name = "Информация не указана";
+        } else {
+
+            this.name = name;
+        }
+        if (town == null || "".equals(town)) {
+            this.town = "Информация не указана";
+        } else {
+            this.town = town;
+        }
+        if (job == null || "".equals(job)) {
+            this.job = "Информация не указана";
+        } else {
+            this.job = job;
+        }
     }
 
     public String getJob() {
@@ -24,7 +37,11 @@ public class Human {
     }
 
     public void setYearOfBirth(int age) {
-        this.yearOfBirth = 2022 - age;
+        if (2022 - age < 0) {
+            this.yearOfBirth = 0;
+        } else {
+            this.yearOfBirth = 2022 - age;
+        }
     }
 
     public String getName() {

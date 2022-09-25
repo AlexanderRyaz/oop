@@ -8,5 +8,7 @@ public class Main {
         System.out.println(human3);
         Human human4 = new Human(27, "Артем","Москва","директор тпо развитию бизнеса");
         System.out.println(human4);
+        Human human5 = new Human(2027, "",null,"директор тпо развитию бизнеса");
+        System.out.println(human5);
     }
 }
