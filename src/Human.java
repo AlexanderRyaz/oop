@@ -6,22 +6,9 @@ public class Human {
 
     public Human(int age, String name, String town, String job) {
         setYearOfBirth(age);
-        if (name == null || "".equals(name)) {
-            this.name = "Информация не указана";
-        } else {
-
-            this.name = name;
-        }
-        if (town == null || "".equals(town)) {
-            this.town = "Информация не указана";
-        } else {
-            this.town = town;
-        }
-        if (job == null || "".equals(job)) {
-            this.job = "Информация не указана";
-        } else {
-            this.job = job;
-        }
+        setName(name);
+        setTown(town);
+        setJob(job);
     }
 
     public String getJob() {
@@ -29,7 +16,11 @@ public class Human {
     }
 
     public void setJob(String job) {
-        this.job = job;
+        if (job == null || "".equals(job)) {
+            this.job = "Информация не указана";
+        } else {
+            this.job = job;
+        }
     }
 
     public int getYearOfBirth() {
@@ -49,7 +40,12 @@ public class Human {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name == null || "".equals(name)) {
+            this.name = "Информация не указана";
+        } else {
+
+            this.name = name;
+        }
     }
 
     public String getTown() {
@@ -57,7 +53,11 @@ public class Human {
     }
 
     public void setTown(String town) {
-        this.town = town;
+        if (town == null || "".equals(town)) {
+            this.town = "Информация не указана";
+        } else {
+            this.town = town;
+        }
     }
 
     @Override
